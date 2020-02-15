@@ -2,7 +2,7 @@
 
 Uses GPT-2 to train a model on message data. Requires Python >= 3.6.
 
-Data is *not* provided.
+Data is *not* provided. It should be placed in a `data` folder inside the working directory.
 
 ## Processing JSON
 
