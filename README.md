@@ -19,7 +19,7 @@ Message data comes in a specific format from statbot database dumps. Time is in 
   ],
 ```
 
-Messages can be accessed in the JSON at `.results[0].series[0].values, values`.
+Messages can be accessed in the JSON at `.results[0].series[0].values`.
 
 If you have a JSON dump, stick it in the `data` folder and then run 
 ```
