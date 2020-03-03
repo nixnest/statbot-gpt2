@@ -1,5 +1,6 @@
 import sys
 import gpt_2_simple as gpt2
+import os.path
 
 model = '355M'
 steps = 50000
@@ -8,7 +9,8 @@ steps = 50000
 def train_model(channel: str):
     file_name = 'data/%s.txt' % channel
 
-    gpt2.download_gpt2(model_name=model)
+    if not os.path.exists('model'):
+        gpt2.download_gpt2(model_name=model)
 
     sess = gpt2.start_tf_sess()
 
