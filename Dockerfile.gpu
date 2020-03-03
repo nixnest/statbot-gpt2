@@ -1,0 +1,13 @@
+FROM tensorflow/tensorflow:1.15.2-gpu-py3
+
+ARG channel_name
+
+COPY . /usr/src/app
+WORKDIR /usr/src/app
+
+VOLUME ./$channel_name /usr/src/app/checkpoint
+
+RUN pip install -r requirements.txt
+
+RUN python nixnest_gpt2/process.py $channel_name
+RUN python nixnest_gpt2/train.py $channel_name
