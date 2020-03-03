@@ -15,7 +15,7 @@ def train_model(channel: str):
     gpt2.finetune(sess,
                   dataset=file_name,
                   model_name=model,
-                  steps=1000,
+                  steps=steps,
                   restore_from='latest',
                   run_name='run1',
                   print_every=100,
